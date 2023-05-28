@@ -10,6 +10,18 @@ export const ContainerWrapper = styled(Box)(({ theme }) => ({
 	padding: theme.spacing(0, 3),
 	alignItems: 'center',
 	maxWidth: '100%',
-	width: ''
+	animation: "fadeIn .3s ease",
+
+	"@keyframes fadeIn": {
+		from: {
+			opacity: 0,
+			transform: "translateY(8px)"
+		},
+		
+		to: {
+			opacity: 1,
+			transform: "translateY(0)"
+		}
+	}
 
 }))

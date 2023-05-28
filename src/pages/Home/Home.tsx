@@ -2,6 +2,7 @@ import { Button, Stack, Typography } from '@mui/material'
 import * as Styled from './Home.styled'
 import { ContainerWrapper } from '../../components/Container/index'
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { FiDownload } from 'react-icons/fi'
 
 export const Home = () => {
 	
@@ -24,7 +25,12 @@ export const Home = () => {
 					</Typography>
 
 					<Stack spacing={2} direction="row" >
-						<Button> resume </Button>
+						<Button>
+							<span>
+								<FiDownload/>
+							</span>
+							resume
+						</Button>
 
 						<span> <BsGithub/> </span>
 

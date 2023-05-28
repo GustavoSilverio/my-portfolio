@@ -13,6 +13,7 @@ export const Header = styled(Stack)(({ theme }) => ({
 		fontSize: 36,
 		color: theme.palette.grey[100],
 		fontWeight: 700,
+		cursor: 'pointer',
 	},
 	
 	[theme.breakpoints.down('md')]: {
@@ -20,7 +21,7 @@ export const Header = styled(Stack)(({ theme }) => ({
 		padding: theme.spacing(4, 8, 0),
 		
 		h1: {
-			animation: 'pop 2.5s infinite ease',
+			animation: 'pop 2.5s infinite ease-in-out',
 		},
 	},
 

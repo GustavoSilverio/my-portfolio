@@ -1,22 +1,22 @@
 import { Typography } from '@mui/material';
 import * as Styled from './Header.styled';
-import { NavLink } from 'react-router-dom';
+import { NavLink, redirect } from 'react-router-dom';
 
 export const Header = () => {
 
 	return (
 		<Styled.Header>
-			<Typography variant='h1'> GO_ </Typography>
+			<Typography onClick={() => redirect("/")} variant='h1'> GO_ </Typography>
 				<Styled.Navigation>
 					<li>
-						<NavLink to="#">
-							projects
+						<NavLink to="/">
+							about me
 						</NavLink>
 					</li>
-				
+					
 					<li>
-						<NavLink to="#">
-							about me
+						<NavLink to="/projects">
+							projects
 						</NavLink>
 					</li>
 				

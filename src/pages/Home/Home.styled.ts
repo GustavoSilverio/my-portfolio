@@ -13,7 +13,7 @@ export const About = styled (Stack)(({ theme }) => ({
 	alignItems: 'center',
 
 	h2: {
-		fontSize: 48,
+		fontSize: "clamp(22px, 6vw, 48px)",
 		fontWeight: 700,
 
 		span: {
@@ -33,13 +33,37 @@ export const About = styled (Stack)(({ theme }) => ({
 			padding: theme.spacing(1, 2),
 			border: `1px solid ${theme.palette.secondary.dark}`,
 			borderRadius: 2,
+			fontWeight: 700,
+
+			fontSize: 16,
+			textTransform: 'none',
 			color: theme.palette.secondary.dark,
+			display: 'flex',
+			gap: theme.spacing(1),
+
+			span: {
+				fontSize: 20,
+
+				"&:hover": {
+					color: "#000",
+				},
+			},
+
+			"&:hover": {
+				backgroundColor: theme.palette.secondary.main,
+				color: "#000",
+			},
 		},
 
 			span: {
 				display: 'flex',
 				fontSize: 24,
 				cursor: 'pointer',
+				transition: '.4s ease',
+				
+				"&:hover": {
+					color: theme.palette.secondary.main,
+				},
 			},
 	},
 
