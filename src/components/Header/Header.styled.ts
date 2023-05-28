@@ -18,7 +18,7 @@ export const Header = styled(Stack)(({ theme }) => ({
 	
 	[theme.breakpoints.down('md')]: {
 		justifyContent: 'center',
-		padding: theme.spacing(4, 8, 0),
+		padding: theme.spacing(4, 8, 4),
 		
 		h1: {
 			animation: 'pop 2.5s infinite ease-in-out',

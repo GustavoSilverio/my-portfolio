@@ -1,8 +1,15 @@
-import { CardActions, CardContent, CardMedia, Link, Stack, Typography } from '@mui/material'
+import {
+	CardActions,
+	CardContent,
+	CardMedia,
+	Link,
+	Stack,
+	Typography
+} from '@mui/material'
 import * as Styled from './ProjectCard.styled'
 import { ProjectCardProps } from './ProjectCard.types'
 import { BsGithub } from 'react-icons/bs';
-import { FiExternalLink } from 'react-icons/fi'
+import { FaExternalLinkSquareAlt } from 'react-icons/fa'
 
 export const ProjectCard = ({
 	title,
@@ -13,25 +20,24 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
 	return (
 		<Styled.CardProj>
-
 			<CardMedia
 				sx={{
-					height: 140,
+					height: 100,
 				}}
 				image={imagem}
 				title={title}
-			/>
-			<CardContent>
-				<Typography variant="h5">
+				/>
+			<CardContent className='content'>
+				<Typography className="title">
 					{title}
 				</Typography>
 				
-				<Typography>
+				<Typography className="desc">
 					{desc}
 				</Typography>
 			</CardContent>
-			<CardActions>
-				<Stack>
+			<CardActions className='links'>
+				<Stack direction="row" spacing={1.75}>
 					<Link
 						href={linkGit}
 						target="_blank"
@@ -43,9 +49,9 @@ export const ProjectCard = ({
 					<Link
 						href={linkRed}
 						target="_blank"
-					>
+						>
 						<span>
-							<FiExternalLink/>
+							<FaExternalLinkSquareAlt/>
 						</span>
 					</Link>
 				</Stack>

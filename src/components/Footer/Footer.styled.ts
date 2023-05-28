@@ -14,5 +14,11 @@ export const Footer = styled(Stack)(({ theme }) => ({
 	p: {
 		color: theme.palette.grey[100],
 		fontWeight: 700,
+		transition: 'color .3s ease',
+		cursor: 'pointer',
+
+		"&:hover": {
+			color: theme.palette.secondary.main,
+		}
 	}
 }))

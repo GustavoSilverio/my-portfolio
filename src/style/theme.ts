@@ -6,7 +6,7 @@ export const theme = createTheme({
 		mode: 'dark',
 
 		primary: {
-			main: "rgba(75,3,31,1)",
+			main: "rgba(75,3,31)",
 		},
 		secondary: {
 			main: "rgba(255,0,92,1)",
