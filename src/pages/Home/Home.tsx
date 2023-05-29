@@ -29,7 +29,7 @@ export const Home = () => {
 				<Styled.About spacing={3}>
 					<Typography variant='h2'> Olá, sou <span>Gustavo Oliveira.</span> </Typography>
 					
-					<Typography variant='h4'> Um frontend developer. </Typography>
+					<Typography variant='h4'> Um full-stack developer. </Typography>
 					
 					<Typography>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
