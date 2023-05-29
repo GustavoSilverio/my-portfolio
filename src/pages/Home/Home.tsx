@@ -31,9 +31,13 @@ export const Home = () => {
 							resume
 						</Button>
 
-						<span> <BsGithub/> </span>
+						<span onClick={() => window.open("https://github.com/GustavoSilverio")}>
+							<BsGithub/>
+						</span>
 
-						<span> <BsLinkedin/> </span>
+						<span onClick={() => window.open("https://www.linkedin.com/in/gustavosilverioo/")}>
+							<BsLinkedin/>
+						</span>
 					</Stack>
 				</Styled.About>
 			</Styled.Home>

@@ -4,6 +4,14 @@ import { NavLink, redirect } from 'react-router-dom';
 
 export const Header = () => {
 
+	function handleContact() {
+		const mensagemUrl = "Olá, tudo bem? Gostaria de fazer um orçamento!";
+
+		const mensagemUrlFiltrada = window.encodeURIComponent(mensagemUrl);
+
+		window.open(`https://api.whatsapp.com/send?phone=5511943352341&text=${mensagemUrlFiltrada}`)
+	}
+
 	return (
 		<Styled.Header>
 			<Typography onClick={() => redirect("/")} variant='h1'> GO_ </Typography>
@@ -21,7 +29,7 @@ export const Header = () => {
 					</li>
 				
 					<li>
-						<NavLink to="#">
+						<NavLink onClick={() => handleContact()}>
 							contact
 						</NavLink>
 					</li>

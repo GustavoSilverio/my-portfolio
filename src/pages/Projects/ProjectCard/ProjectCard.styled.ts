@@ -33,6 +33,11 @@ export const CardProj = styled(Card)(({ theme }) => ({
 				span: {
 					fontSize: 24,
 					color: theme.palette.secondary.dark,
+					transition:"color .4s ease",
+
+					"&:hover": {
+						color: theme.palette.secondary.main
+					}
 				}
 			}
 		}
