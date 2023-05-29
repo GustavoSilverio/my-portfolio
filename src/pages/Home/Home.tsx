@@ -6,6 +6,8 @@ import { FiDownload } from 'react-icons/fi'
 
 export const Home = () => {
 
+	//TODO: Arrumar o clamp do title e do subtitle
+
 	return (
 		<ContainerWrapper>
 			<Styled.Home>

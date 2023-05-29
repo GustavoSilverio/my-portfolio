@@ -22,7 +22,7 @@ export const About = styled (Stack)(({ theme }) => ({
 	},
 
 	h4: {
-		fontSize: 24,
+		fontSize: "clamp(14pX, 4vw, 36px)",
 		fontWeight: 700,
 	},
 
