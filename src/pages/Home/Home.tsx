@@ -3,25 +3,8 @@ import * as Styled from './Home.styled'
 import { ContainerWrapper } from '../../components/Container/index'
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { FiDownload } from 'react-icons/fi'
-import { useEffect } from 'react';
-import Chalk from 'chalk';
 
 export const Home = () => {
-	
-	const slctedColor = Chalk.rgb(255, 0, 92)
-
-	useEffect(() => {
-		console.log(slctedColor(`Developed by:
-
-			 ██████╗  █████╗            ██╗  
-			██╔════╝ ██╔══██╗    ██████╗╚██╗ 
-			██║  ██╗ ██║  ██║    ╚═════╝ ╚██╗
-			██║  ╚██╗██║  ██║    ██████╗ ██╔╝
-			╚██████╔╝╚█████╔╝    ╚═════╝██╔╝ 
-			 ╚═════╝  ╚════╝            ╚═╝  
-		`))
-	})
-
 
 	return (
 		<ContainerWrapper>
