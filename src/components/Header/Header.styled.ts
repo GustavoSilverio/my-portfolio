@@ -63,6 +63,14 @@ export const Navigation = styled('ul')(({ theme }) => ({
 		},
 	},
 
+	"li button": {
+		backgroundColor: 'transparent',
+		border: 'none',
+		color: theme.palette.grey[100],
+		fontSize: 16,
+		cursor: 'pointer',
+	},
+
 	[theme.breakpoints.down('md')]: {
 		display: 'none',
 	},

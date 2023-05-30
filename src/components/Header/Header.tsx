@@ -29,9 +29,9 @@ export const Header = () => {
 					</li>
 				
 					<li>
-						<NavLink onClick={() => handleContact()}>
+						<button onClick={() => handleContact()}>
 							contact
-						</NavLink>
+						</button>
 					</li>
 				</Styled.Navigation>
 		</Styled.Header>
