@@ -7,8 +7,7 @@ export const Footer = styled(Stack)(({ theme }) => ({
 	alignItems: 'center',
 	padding: theme.spacing(3.25, 2),
 
-	bottom: 0,
-	position: 'absolute',
+	position: 'relative',
 	width: '100%',
 
 	p: {
