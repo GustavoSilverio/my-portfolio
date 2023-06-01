@@ -3,9 +3,9 @@ import * as Styled from './MobileMenu.styled'
 
 export const MobileMenu = () => {
     
-    const { showMenu, setShowMenu } = useMobileMenuContext();
+    const { setShowMenu } = useMobileMenuContext();
 
-    return ( showMenu &&
+    return (
         <Styled.MobileMenu>
             <h1>Hello, mobile</h1>
             <button onClick={() => setShowMenu(false)}>
