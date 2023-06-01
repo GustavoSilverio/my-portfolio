@@ -23,8 +23,7 @@ export const Header = styled(Stack)(({ theme }) => ({
 	},
 	
 	[theme.breakpoints.down('md')]: {
-		justifyContent: 'center',
-		padding: theme.spacing(4, 8, 4),
+		padding: theme.spacing(4, 8, 0),
 		
 		h1: {
 			animation: 'pop 2.5s infinite ease-in-out',
@@ -71,7 +70,13 @@ export const Navigation = styled('ul')(({ theme }) => ({
 		cursor: 'pointer',
 	},
 
-	[theme.breakpoints.down('md')]: {
-		display: 'none',
-	},
+	span: {
+		fontSize: 30,
+		color: theme.palette.grey[100],
+		transition: "color .4s ease",
+		
+		"&:hover": {
+			color: theme.palette.secondary.main,
+		}
+	}
 }))

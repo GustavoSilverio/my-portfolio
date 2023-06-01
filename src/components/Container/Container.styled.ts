@@ -11,7 +11,10 @@ export const ContainerWrapper = styled(Box)(({ theme }) => ({
 	alignItems: 'center',
 	maxWidth: '100%',
 	animation: "fadeIn .3s ease",
-	margin: theme.spacing(10, 0),
+	
+	[theme.breakpoints.down("md")]: {
+		margin: theme.spacing(5, 0),
+	},
 
 	"@keyframes fadeIn": {
 		from: {
