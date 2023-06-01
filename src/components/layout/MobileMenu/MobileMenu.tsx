@@ -3,10 +3,10 @@ import * as Styled from './MobileMenu.styled'
 
 export const MobileMenu = () => {
     
-    const { setShowMenu } = useMobileMenuContext();
+    const { showMenu, setShowMenu } = useMobileMenuContext();
 
     return (
-        <Styled.MobileMenu>
+        <Styled.MobileMenu className={showMenu? "active" : undefined}>
             <h1>Hello, mobile</h1>
             <button onClick={() => setShowMenu(false)}>
                 fechar
