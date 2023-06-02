@@ -34,15 +34,18 @@ export const About = styled (Stack)(({ theme }) => ({
 			border: `1px solid ${theme.palette.secondary.dark}`,
 			borderRadius: 2,
 			fontWeight: 700,
-
+			
 			fontSize: 16,
 			textTransform: 'none',
 			color: theme.palette.secondary.dark,
 			display: 'flex',
-			gap: theme.spacing(1),
 
-			span: {
+			gap: theme.spacing(1),
+			transition: 'all .4s ease',
+			
+			".download": {
 				fontSize: 20,
+				display: 'flex',
 
 				"&:hover": {
 					color: "#000",
@@ -55,16 +58,16 @@ export const About = styled (Stack)(({ theme }) => ({
 			},
 		},
 
-			span: {
-				display: 'flex',
-				fontSize: 24,
-				cursor: 'pointer',
-				transition: '.4s ease',
-				
-				"&:hover": {
-					color: theme.palette.secondary.main,
-				},
+		".midias": {
+			display: 'flex',
+			fontSize: 24,
+			cursor: 'pointer',
+			transition: '.4s ease',
+			
+			"&:hover": {
+				color: theme.palette.secondary.main,
 			},
+		},
 	},
 
 	[theme.breakpoints.down('md')]: {

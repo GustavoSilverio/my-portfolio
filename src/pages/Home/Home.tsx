@@ -25,17 +25,18 @@ export const Home = () => {
 
 					<Stack spacing={2} direction="row" >
 						<Button>
-							<span>
+							<span className='download'>
 								<FiDownload/>
 							</span>
+
 							resume
 						</Button>
 
-						<span onClick={() => window.open("https://github.com/GustavoSilverio")}>
+						<span className="midias" onClick={() => window.open("https://github.com/GustavoSilverio")}>
 							<BsGithub/>
 						</span>
 
-						<span onClick={() => window.open("https://www.linkedin.com/in/gustavosilverioo/")}>
+						<span className="midias" onClick={() => window.open("https://www.linkedin.com/in/gustavosilverioo/")}>
 							<BsLinkedin/>
 						</span>
 					</Stack>
