@@ -8,14 +8,11 @@ export const MobileMenu = styled(Box)(({ theme  }) => ({
     backgroundColor: theme.palette.grey[200],
     
     zIndex: 9999,
-    border: '1px solid red',
-    visibility: 'hidden',
-    opacity: 0,
-    transform: "translateY(-8px)",
+    transform: "translateX(-100%)",
+    transition: 'transform .7s ease',
+    padding: theme.spacing(3),
 
     "&.active": {
-        opactity: 1,
-        visibility: 'visible',
-        transform: 'translateY(0)',  
+        transform: 'translateX(0)',
     },
 }))

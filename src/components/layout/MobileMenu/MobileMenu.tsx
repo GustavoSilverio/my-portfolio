@@ -1,5 +1,6 @@
 import { useMobileMenuContext } from '../../../contexts/MobileMenuContext'
 import * as Styled from './MobileMenu.styled'
+// import { IoClose } from 'react-icons/io5'
 
 export const MobileMenu = () => {
     
@@ -9,7 +10,8 @@ export const MobileMenu = () => {
         <Styled.MobileMenu className={showMenu? "active" : undefined}>
             <h1>Hello, mobile</h1>
             <button onClick={() => setShowMenu(false)}>
-                fechar
+                {/* <IoClose/> */}
+                Fechar
             </button>
         </Styled.MobileMenu>
     )

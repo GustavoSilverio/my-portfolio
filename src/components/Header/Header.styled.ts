@@ -24,24 +24,6 @@ export const Header = styled(Stack)(({ theme }) => ({
 	
 	[theme.breakpoints.down('md')]: {
 		padding: theme.spacing(4, 8, 0),
-		
-		h1: {
-			animation: 'pop 2.5s infinite ease-in-out',
-		},
-	},
-
-	"@keyframes pop": {
-		'0%': {
-			transform: 'scale(1)',
-		},
-
-		'50%': {
-			transform: 'scale(1.2)',
-		},
-
-		'100%': {
-			transform: 'scale(1)',
-		},
 	},
 }))
 
