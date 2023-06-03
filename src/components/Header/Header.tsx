@@ -1,55 +1,48 @@
-import { Typography } from '@mui/material';
-import * as Styled from './Header.styled';
-import { NavLink, redirect } from 'react-router-dom';
-import { useMobileMenuContext } from '../../contexts/MobileMenuContext';
-import { useTheme, useMediaQuery } from '@mui/material';
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { Typography } from "@mui/material";
+import * as Styled from "./Header.styled";
+import { NavLink } from "react-router-dom";
+import { useMobileMenuContext } from "../../contexts/MobileMenuContext";
+import { useTheme, useMediaQuery } from "@mui/material";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Header = () => {
+  const { setShowMenu } = useMobileMenuContext();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-	const { setShowMenu } = useMobileMenuContext();
-	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  function handleContact() {
+    const mensagemUrl = "Olá, tudo bem? Gostaria de fazer um orçamento!";
+    const mensagemUrlFiltrada = window.encodeURIComponent(mensagemUrl);
 
-	function handleContact() {
-		const mensagemUrl = "Olá, tudo bem? Gostaria de fazer um orçamento!";
+    window.open(
+      `https://api.whatsapp.com/send?phone=5511943352341&text=${mensagemUrlFiltrada}`
+    );
+  }
 
-		const mensagemUrlFiltrada = window.encodeURIComponent(mensagemUrl);
+  return (
+    <Styled.Header>
+      <Typography variant="h1"> GO_ </Typography>
+      {!isMobile ? (
+        <Styled.Navigation>
+          <li>
+            <NavLink to="/">about me</NavLink>
+          </li>
 
-		window.open(`https://api.whatsapp.com/send?phone=5511943352341&text=${mensagemUrlFiltrada}`)
-	}
+          <li>
+            <NavLink to="/projects">projects</NavLink>
+          </li>
 
-	return (
-		<Styled.Header>
-			<Typography onClick={() => redirect("/")} variant='h1'> GO_ </Typography>
-				{ !isMobile? (
-						<Styled.Navigation>
-							<li>
-								<NavLink to="/">
-									about me
-								</NavLink>
-							</li>
-							
-							<li>
-								<NavLink to="/projects">
-									projects
-								</NavLink>
-							</li>
-						
-							<li>
-								<button onClick={() => handleContact()}>
-									contact
-								</button>
-							</li>
-						</Styled.Navigation>
-					) : (
-						<Styled.Navigation>
-							<span onClick={() => setShowMenu(true)}>
-								<GiHamburgerMenu/>
-							</span>
-						</Styled.Navigation>
-					)
-				}
-		</Styled.Header>
-	)
-}
+          <li>
+            <button onClick={() => handleContact()}>contact</button>
+          </li>
+        </Styled.Navigation>
+      ) : (
+        <Styled.Navigation>
+          <span onClick={() => setShowMenu(true)}>
+            <GiHamburgerMenu />
+          </span>
+        </Styled.Navigation>
+      )}
+    </Styled.Header>
+  );
+};

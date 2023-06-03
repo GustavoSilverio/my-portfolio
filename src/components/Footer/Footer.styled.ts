@@ -2,22 +2,23 @@ import { Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const Footer = styled(Stack)(({ theme }) => ({
-	borderTop: `1px solid ${theme.palette.primary.main}`,
-	justifyContent: 'center',
-	alignItems: 'center',
-	padding: theme.spacing(3.25, 2),
+  borderTop: `1px solid ${theme.palette.primary.main}`,
+  justifyContent: "center",
+  alignItems: "center",
+  padding: theme.spacing(3.25, 2),
+  zIndex: "999",
 
-	position: 'relative',
-	width: '100%',
+  position: "relative",
+  width: "100%",
 
-	p: {
-		color: theme.palette.grey[100],
-		fontWeight: 700,
-		transition: 'color .3s ease',
-		cursor: 'pointer',
+  p: {
+    color: theme.palette.grey[100],
+    fontWeight: 700,
+    transition: "color .3s ease",
+    cursor: "pointer",
 
-		"&:hover": {
-			color: theme.palette.secondary.main,
-		}
-	}
-}))
+    "&:hover": {
+      color: theme.palette.secondary.main,
+    },
+  },
+}));
