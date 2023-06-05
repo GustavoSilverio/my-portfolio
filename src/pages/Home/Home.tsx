@@ -21,7 +21,7 @@ export const Home = () => {
 
           <Typography>
             Tenho 17 anos, sou um desenvolvedor full-stack, estou trabalhando
-            atualmente com JavaScript, TypeScript, C# e SQL. também estudo na
+            atualmente com TypeScript, C# e SQL. também estudo na
             Etec MCM cursando programação para internet.
           </Typography>
 
